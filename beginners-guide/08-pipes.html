@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angular Pipes</title>
+</head>
+<body>
+  <h1>Pipes</h1>
+  <p>
+    Pipes transform data in templates. Angular provides built-in pipes like <code>date</code>, <code>uppercase</code>, <code>currency</code>.
+  </p>
+  <h2>Example</h2>
+  <pre>
+&lt;p&gt;{{ today | date:'fullDate' }}&lt;/p&gt;
+&lt;p&gt;{{ price | currency:'USD' }}&lt;/p&gt;
+  </pre>
+  <h2>Custom Pipe Example</h2>
+  <pre>
+ng generate pipe reverse
+  </pre>
+  <pre>
+<!-- reverse.pipe.ts -->
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({name: 'reverse'})
+export class ReversePipe implements PipeTransform {
+  transform(value: string): string {
+    return value.split('').reverse().join('');
+  }
+}
+  </pre>
+</body>
+</html>

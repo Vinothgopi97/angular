@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angular Components</title>
+</head>
+<body>
+  <h1>Components</h1>
+  <p>
+    Components are the building blocks of Angular applications. Each component consists of:
+  </p>
+  <ul>
+    <li>A TypeScript class</li>
+    <li>An HTML template</li>
+    <li>Optional CSS styles</li>
+  </ul>
+  <h2>Example</h2>
+  <pre>
+ng generate component hello
+  </pre>
+  <pre>
+<!-- hello.component.ts -->
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-hello',
+  template: '&lt;h2&gt;Hello, Angular!&lt;/h2&gt;'
+})
+export class HelloComponent {}
+  </pre>
+  <p>Use <code>&lt;app-hello&gt;&lt;/app-hello&gt;</code> in your template to display the component.</p>
+</body>
+</html>

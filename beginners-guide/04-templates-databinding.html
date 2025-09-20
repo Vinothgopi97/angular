@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Templates & Data Binding</title>
+</head>
+<body>
+  <h1>Templates & Data Binding</h1>
+  <p>
+    Templates define the view of a component. Data binding connects component data with the template.
+  </p>
+  <ul>
+    <li><b>Interpolation:</b> <code>{{ value }}</code></li>
+    <li><b>Property binding:</b> <code>[property]="value"</code></li>
+    <li><b>Event binding:</b> <code>(event)="handler()"</code></li>
+    <li><b>Two-way binding:</b> <code>[(ngModel)]="value"</code></li>
+  </ul>
+  <h2>Example</h2>
+  <pre>
+<!-- hello.component.html -->
+&lt;input [(ngModel)]="name"&gt;
+&lt;p&gt;Hello, {{ name }}!&lt;/p&gt;
+  </pre>
+</body>
+</html>

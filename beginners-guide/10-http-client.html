@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angular HTTP Client</title>
+</head>
+<body>
+  <h1>HTTP Client</h1>
+  <p>
+    Angular's HttpClient is used to communicate with backend services over HTTP.
+  </p>
+  <h2>Example</h2>
+  <pre>
+import { HttpClient } from '@angular/common/http';
+
+constructor(private http: HttpClient) {}
+
+getData() {
+  this.http.get('https://api.example.com/items')
+    .subscribe(data =&gt; console.log(data));
+}
+  </pre>
+  <p>Don't forget to import <code>HttpClientModule</code> in your app module.</p>
+</body>
+</html>

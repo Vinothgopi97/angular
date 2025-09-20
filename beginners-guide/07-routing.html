@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angular Routing</title>
+</head>
+<body>
+  <h1>Routing</h1>
+  <p>
+    Routing lets you navigate between different views or components.
+  </p>
+  <h2>Example</h2>
+  <pre>
+<!-- app-routing.module.ts -->
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}
+  </pre>
+  <pre>
+&lt;a routerLink="/about"&gt;About&lt;/a&gt;
+&lt;router-outlet&gt;&lt;/router-outlet&gt;
+  </pre>
+</body>
+</html>

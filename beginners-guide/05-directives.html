@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angular Directives</title>
+</head>
+<body>
+  <h1>Directives</h1>
+  <p>
+    Directives are instructions in the DOM. Common built-in directives:
+  </p>
+  <ul>
+    <li><b>*ngIf</b>: Conditionally includes a template</li>
+    <li><b>*ngFor</b>: Repeats a template for each item</li>
+    <li><b>[ngClass]</b>: Adds/removes CSS classes</li>
+  </ul>
+  <h2>Example</h2>
+  <pre>
+&lt;div *ngIf="isVisible"&gt;Visible!&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li *ngFor="let item of items"&gt;{{ item }}&lt;/li&gt;
+&lt;/ul&gt;
+  </pre>
+</body>
+</html>

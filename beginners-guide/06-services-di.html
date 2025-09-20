@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Services & Dependency Injection</title>
+</head>
+<body>
+  <h1>Services & Dependency Injection</h1>
+  <p>
+    Services provide reusable logic. Angular uses dependency injection (DI) to provide services to components.
+  </p>
+  <h2>Example</h2>
+  <pre>
+ng generate service data
+  </pre>
+  <pre>
+<!-- data.service.ts -->
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataService {
+  getData() {
+    return ['Angular', 'React', 'Vue'];
+  }
+}
+  </pre>
+  <pre>
+<!-- app.component.ts -->
+import { DataService } from './data.service';
+
+constructor(private dataService: DataService) {}
+  </pre>
+</body>
+</html>

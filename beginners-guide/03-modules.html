@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angular Modules</title>
+</head>
+<body>
+  <h1>Modules</h1>
+  <p>
+    Modules organize an Angular application into cohesive blocks of functionality.
+    Every Angular app has at least one module, the root module (<code>AppModule</code>).
+  </p>
+  <h2>Example</h2>
+  <pre>
+<!-- app.module.ts -->
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
+  </pre>
+</body>
+</html>
